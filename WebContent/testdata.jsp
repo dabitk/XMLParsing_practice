@@ -30,13 +30,13 @@
 	NodeList tag_mat = doc.getElementsByTagName("mat");	//xml mat tag
 	//mat이라는 태그로 구성된 모든 노드를 tag_mat 노드리스트에 적재함
 	
-	out.println("<table cellspacing=1 width=500 border=1>");
+	out.println("<table cellspacing='1' width='500' border='1'>");
 	out.println("<tr>");
-	out.println("<td width=100>이름</td>");
-	out.println("<td width=100>학번</td>");
-	out.println("<td width=100>국어</td>");
-	out.println("<td width=100>영어</td>");
-	out.println("<td width=100>수학</td>");
+	out.println("<td width='100'>이름</td>");
+	out.println("<td width='100'>학번</td>");
+	out.println("<td width='100'>국어</td>");
+	out.println("<td width='100'>영어</td>");
+	out.println("<td width='100'>수학</td>");
 	out.println("</tr>");
 	
 	for(int i=0;i<tag_name.getLength(); i++){
@@ -45,13 +45,14 @@
 		//tag_name의 길이만큼만 루프를 돌려도 모든 리스트를 전부 출력할 수가 있다.
 		out.println("<tr>");
 		//아래와 같은 형식으로 불러온다..
-		out.println("<td width=100>"+tag_name.item(i).getFirstChild().getNodeValue()+"</td>");		//.getFirstChild()가 없으면 null이 나온다
-		out.println("<td width=100>"+tag_studentid.item(i).getFirstChild().getNodeValue()+"</td>");
-		out.println("<td width=100>"+tag_kor.item(i).getFirstChild().getNodeValue()+"</td>");
-		out.println("<td width=100>"+tag_eng.item(i).getFirstChild().getNodeValue()+"</td>");
-		out.println("<td width=100>"+tag_mat.item(i).getFirstChild().getNodeValue()+"</td>");
+		out.println("<td width='100'>"+tag_name.item(i).getFirstChild().getNodeValue()+"</td>");		//.getFirstChild()가 없으면 null이 나온다
+		out.println("<td width='100'>"+tag_studentid.item(i).getFirstChild().getNodeValue()+"</td>");
+		out.println("<td width='100'>"+tag_kor.item(i).getFirstChild().getNodeValue()+"</td>");
+		out.println("<td width='100'>"+tag_eng.item(i).getFirstChild().getNodeValue()+"</td>");
+		out.println("<td width='100'>"+tag_mat.item(i).getFirstChild().getNodeValue()+"</td>");
 		out.println("</tr>");
 	}
+	out.println("</table>");
 %>
 </body>
 </html>
